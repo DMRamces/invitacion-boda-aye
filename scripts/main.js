@@ -45,8 +45,21 @@ if (!sessionStorage.getItem("modalMostrado")) {
   sessionStorage.setItem("modalMostrado", "true");
 }
 
-cerrarModal.addEventListener("click", () => {
-  modal.style.display = "none";
+document.addEventListener("DOMContentLoaded", function () {
+    const botonCerrarModal = document.getElementById("cerrarModal");
+    const modal = document.getElementById("modalBienvenida");
+    const audio = document.getElementById("musicaFondo");
+
+    botonCerrarModal.addEventListener("click", function () {
+        modal.style.display = "none"; // Cierra el modal
+
+        // Intenta reproducir la música
+        if (audio) {
+            audio.play().catch(error => {
+                console.error("No se pudo reproducir el audio:", error);
+            });
+        }
+    });
 });
 
 // Modales de asistencia
