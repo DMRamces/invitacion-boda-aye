@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Angie & Errol - Boda</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Modal de bienvenida -->
+  <div id="modalBienvenida" class="modal">
+    <div class="modal-contenido">
+      <img src="imagenes/bienvenida.jpg" alt="Bienvenida a nuestra boda" />
+      <button id="cerrarModal">¡Dinos Tammy!</button>
+    </div>
+  </div>
+
+  <!-- Portada con animación y música -->
+  <section id="portada" class="fade-in">
+    <div class="portada-texto">
+      <h1>¡Nos casamos!</h1>
+      <p>Angie & Errol</p>
+    </div>
+    <audio id="musica" loop autoplay>
+      <source src="musica/musica-boda.mp3" type="audio/mp3" />
+      Tu navegador no soporta audio.
+    </audio>
+    <button id="toggleMusica" aria-label="Control de música">&#x23f8;</button>
+  </section>
+
+  <!-- Sección de información básica -->
+  <section id="info">
+    <h2>¡Estás invitado a nuestra boda!</h2>
+    <p>🗓️<br><strong>Fecha:</strong> 29 de mayo del 2026 – 3:00 p.m.</p>
+    <a href="https://calendar.app.google/Kw8m8qMtpp4aAdXV6" target="_blank" class="boton">Agregar a Calendario</a>
+    <p>📍<br><strong>Lugar:</strong> Hotel Sunset del Mar, Playa Bejuco</p>
+    <a href="https://maps.app.goo.gl/WQYN23TjSY8uY3o28" target="_blank" class="boton">Ver ubicación en Maps</a>
+  </section>
+
+  <!-- Sección cuenta regresiva -->
+  <section id="cuenta-regresiva">
+    <div class="contenedor-imagen">
+      <img src="../imagenes/fondoCuentaRegresiva.png" alt="Fondo cuenta regresiva">
+      <div class="overlay">
+        <h2>Faltan</h2>
+        <div class="reloj">
+          <div><span id="dias">00</span><small>DÍAS</small></div>
+          <div><span id="horas">00</span><small>HS</small></div>
+          <div><span id="minutos">00</span><small>MIN</small></div>
+          <div><span id="segundos">00</span><small>SEG</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Sección confirmación -->
+  <section id="confirmacion">
+    <h2>Confirma tu asistencia</h2>
+    <p>Puedes hacerlo por medio del siguiente formulario</p>
+    <a href="https://forms.gle/FORMULARIO_DE_EJEMPLO" target="_blank" class="boton">Confirmar Asistencia</a>
+  </section>
+
+  <!-- Línea de tiempo -->
+  <section id="timeline">
+    <h2>Itinerario</h2>
+    <div class="linea-tiempo">
+      <div class="evento">
+        <img src="iconos/reloj.svg" alt="Bienvenida" />
+        <p>3:00 p.m. – Bienvenida</p>
+      </div>
+      <div class="evento">
+        <img src="iconos/ceremonia.svg" alt="Ceremonia" />
+        <p>4:00 p.m. – Ceremonia</p>
+      </div>
+      <div class="evento">
+        <img src="iconos/brindis.svg" alt="Brindis" />
+        <p>5:00 p.m. – Brindis</p>
+      </div>
+      <div class="evento">
+        <img src="iconos/recepcion.svg" alt="Recepción" />
+        <p>6:00 p.m. – Recepción</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección parallax con frase -->
+  <section id="frase">
+    <div class="fondo-parallax">
+      <img class="icono-intermedio" src="iconos/intermedio.svg" alt="intermedio" />
+      <h2>Un viaje más que queremos hacer juntos</h2>
+      <img id="icono-intermedio" src="iconos/intermedio.svg" alt="intermedio" />
+    </div>
+  </section>
+
+  <!-- Información importante -->
+  <section id="info-extra">
+    <h2>Código de vestimenta</h2>
+    <p>Semi formal de playa</p>
+    <p>Por favor evita usar negro. Los colores vino y blanco están reservados para los novios.</p>
+    
+    <h2>Opciones de asistencia</h2>
+   <!--<ul>
+      <li>🌞 <strong>Pase del día:</strong> Incluye acceso a playa y almuerzo antes de la boda.</li>
+      <li>🏨 <strong>Pase día + noche:</strong> Incluye todo el día, boda y hospedaje en el hotel.</li>
+      <li>💍 <strong>Boda solamente:</strong> Llegada a las 3:30 p.m. para la ceremonia.</li>
+  </ul>-->
+  
+  <!-- Botones para abrir los modales -->
+  <div class="modal-button-container">
+      <button class="open-modal-btn" data-modal="modal1">
+          Pase del día y boda
+      </button>
+  
+      <button class="open-modal-btn" data-modal="modal2">
+          Pase día y boda + 1 noche
+      </button>
+  
+      <button class="open-modal-btn" data-modal="modal3">
+          Boda solamente
+      </button>
+  </div>
+  
+  <!-- Modal 1 -->
+  <div id="modal1" class="custom-modal">
+      <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          <img src="icon1.png" alt="Icono Pase del día" class="modal-icon">
+          <p>Contenido del Modal 1 (Pase del día)</p>
+          <button class="close-modal-btn">Cerrar</button>
+      </div>
+  </div>
+  
+  <!-- Modal 2 -->
+  <div id="modal2" class="custom-modal">
+      <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          <img src="icon2.png" alt="Icono Pase día + noche" class="modal-icon">
+          <p>Contenido del Modal 2 (Pase día + noche)</p>
+          <button class="close-modal-btn">Cerrar</button>
+      </div>
+  </div>
+  
+  <!-- Modal 3 -->
+  <div id="modal3" class="custom-modal">
+      <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          <img src="icon3.png" alt="Icono Boda solamente" class="modal-icon">
+          <p>Contenido del Modal 3 (Boda solamente)</p>
+          <button class="close-modal-btn">Cerrar</button>
+      </div>
+  </div>
+  
+  </section>
+
+  <!-- Álbum compartido -->
+  <section id="album">
+    <h2>Comparte tus fotos y videos</h2>
+    <p>¡Nos encantaría que nos compartieras tus fotos y videos de este día!</p>
+    <a href="https://drive.google.com/drive/folders/1kVkszP0SzWfvM7g0c2xe5-qmv3aOki8D?usp=drive_link" target="_blank" class="boton">Subir al álbum</a>
+  </section>
+
+  <!-- Carrusel de fotos -->
+  <section id="galeria">
+    <h2>Un vistazo a los recuerdos</h2>
+    <div class="carrusel">
+      <button id="prev" aria-label="Anterior">&#10094;</button> <!-- « -->
+      <img id="imagenCarrusel" src="imagenes/galeria/1.jpg" alt="Foto de la boda" />
+      <button id="next" aria-label="Siguiente">&#10095;</button> <!-- » -->
+    </div>
+  </section>
+
+  <!-- Regalos -->
+  <section id="regalos">
+    <h2>¿Pensabas en un regalo?</h2>
+    <p>Para nosotros lo más importante es tu presencia, pero si deseas darnos un regalo, agradecemos que sea en efectivo. Tendremos una caja para ello el día de la boda.</p>
+  </section>
+
+  <!-- Contacto -->
+  <footer>
+    <p>Contacto: Angie 8870-7579 | Errol 8811-4207</p>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>
