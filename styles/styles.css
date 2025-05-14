@@ -103,10 +103,6 @@ body {
     from { opacity: 0; }
     to { opacity: 1; }
   }
-
-  #info {
-    margin-bottom: -5rem;
-  }
   
   #toggleMusica {
     display: block;
@@ -479,8 +475,8 @@ button.close-modal-btn:hover {
 /* Cuenta Regresiva Movil */
 @media (max-width: 768px) {
   #cuenta-regresiva .overlay {
-    padding: 1rem;
-    transform: translate(-4%, 1.5%);
+    transform: translate(-1%, -1%);
+    
   }
 
   #cuenta-regresiva h2 {
@@ -493,7 +489,7 @@ button.close-modal-btn:hover {
   #cuenta-regresiva .contenedor-imagen {
   position: relative;
   max-width: 600px;
-  padding-top: 100px;
+  padding-top: 50px;
   margin: 0px auto 20px; /* arriba 40px, abajo 20px */
 }
   .reloj {
