@@ -18,6 +18,12 @@ body {
   h1 {
     font-weight: 550;
   }
+
+  li.no-bullets {
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
+}
   
   section {
     padding-bottom: 3rem;
@@ -303,11 +309,13 @@ footer {
     gap: 20px;
     justify-content: center;
     margin-top: 20px;
+    flex-wrap: wrap;
 }
 
 .open-modal-btn {
     background-color: #ac8a51; /* Color de fondo de los botones */
-    max-height: 100px;
+    width: 180px;
+    height: auto;
     border: none;
     padding: 15px 30px;
     color: white;
@@ -348,6 +356,11 @@ footer {
     width: 80%;
     max-width: 500px;
     text-align: center;
+}
+
+  .modal-content img{
+    width: 64px;
+    height: 64px;
 }
 
 .custom-modal .close-btn {

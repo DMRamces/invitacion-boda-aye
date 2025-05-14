@@ -36,7 +36,7 @@
   <section id="info">
     <h2>¡Estás invitado a nuestra boda!</h2>
     <p>🗓️<br><strong>Fecha:</strong> 29 de mayo del 2026 – 3:00 p.m.</p>
-    <a href="https://calendar.app.google/gXyb8jFGSbhwo4ht8" target="_blank" class="boton">Agregar a Calendario</a>
+    <a href="https://calendar.app.google/zUn7hDVqyQNPv3uGA" target="_blank" class="boton">Agregar a Calendario</a> <!-- https://calendar.app.google/gXyb8jFGSbhwo4ht8 -->
     <p>📍<br><strong>Lugar:</strong> Hotel Sunset del Mar, Playa Bejuco</p>
     <a href="https://maps.app.goo.gl/WQYN23TjSY8uY3o28" target="_blank" class="boton">Ver ubicación en Maps</a>
   </section>
@@ -113,14 +113,18 @@
   <!-- Botones para abrir los modales -->
   <div class="modal-button-container">
       <button class="open-modal-btn" data-modal="modal1">
-          Pase del día + boda
+          Pase del día
       </button>
   
       <button class="open-modal-btn" data-modal="modal2">
-          Pase día + boda + 1 noche
+          Pase día + estadía por noche
       </button>
   
       <button class="open-modal-btn" data-modal="modal3">
+          Estadía por noche
+      </button>
+
+      <button class="open-modal-btn" data-modal="modal4">
           Solo boda
       </button>
   </div>
@@ -129,8 +133,15 @@
   <div id="modal1" class="custom-modal">
       <div class="modal-content">
           <span class="close-btn">&times;</span>
-          <img src="icon1.png" alt="Icono Pase del día" class="modal-icon">
-          <p>Contenido del Modal 1 (Pase del día)</p>
+          <img src="/iconos/icon1.svg" alt="Icono Pase del día" class="modal-icon">
+          <h3><strong>Pase del día</strong></h3>
+            <li class="no-bullets">$50 por persona</li>
+              <p>Incluye:
+                <li class="no-bullets">Disfrute del hotel desde las 8am</li>
+                <li class="no-bullets">5 bebidas</li>
+                <li class="no-bullets">Desayuno</li>
+                <li class="no-bullets">Almuerzo</li>
+              </p>
           <button class="close-modal-btn">Cerrar</button>
       </div>
   </div>
@@ -139,8 +150,22 @@
   <div id="modal2" class="custom-modal">
       <div class="modal-content">
           <span class="close-btn">&times;</span>
-          <img src="icon2.png" alt="Icono Pase día + noche" class="modal-icon">
-          <p>Contenido del Modal 2 (Pase día + noche)</p>
+          <img src="/iconos/icon2.svg" alt="Icono Pase día + noche" class="modal-icon">
+          <h3><strong>Pase del día</strong></h3>
+            <li class="no-bullets">$50 por persona</li>
+              <p>Incluye:
+                <li class="no-bullets">Disfrute del hotel desde las 8am</li>
+                <li class="no-bullets">5 bebidas</li>
+                <li class="no-bullets">Desayuno</li>
+                <li class="no-bullets">Almuerzo</li>
+              </p>
+          <h3><strong>Estadía por noche</strong></h3>
+            <li class="no-bullets">$125 por persona por noche</li>
+              <p>Incluye:
+                <li class="no-bullets">Desayunos</li>
+                <li class="no-bullets">Entrada 2pm</li>
+                <li class="no-bullets">Salida 12md</li>
+              </p>
           <button class="close-modal-btn">Cerrar</button>
       </div>
   </div>
@@ -149,8 +174,25 @@
   <div id="modal3" class="custom-modal">
       <div class="modal-content">
           <span class="close-btn">&times;</span>
-          <img src="icon3.png" alt="Icono Boda solamente" class="modal-icon">
-          <p>Contenido del Modal 3 (Boda solamente)</p>
+          <img src="/iconos/icon3.svg" alt="Icono estadía por noche" class="modal-icon">
+          <h3><strong>Estadía por noche</strong></h3>
+            <li class="no-bullets">$125 por persona por noche</li>
+              <p>Incluye:
+                <li class="no-bullets">Desayunos</li>
+                <li class="no-bullets">Entrada 2pm</li>
+                <li class="no-bullets">Salida 12md</li>
+              </p>
+          <button class="close-modal-btn">Cerrar</button>
+      </div>
+  </div>
+
+   <!-- Modal 4 -->
+  <div id="modal4" class="custom-modal">
+      <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          <img src="/iconos/icon4.svg" alt="Icono Boda solamente" class="modal-icon">
+          <h3><strong>Solo la boda</strong></h3>
+            <li class="no-bullets">Te daremos la bienvenida a partir de las 3pm y la celebración se extenderá hasta las 10 pm.</li>            
           <button class="close-modal-btn">Cerrar</button>
       </div>
   </div>
