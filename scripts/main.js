@@ -45,22 +45,20 @@ if (!sessionStorage.getItem("modalMostrado")) {
   sessionStorage.setItem("modalMostrado", "true");
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-    const botonCerrarModal = document.getElementById("cerrarModal");
-    const modal = document.getElementById("modalBienvenida");
-    const audio = document.getElementById("musicaFondo");
-
-    botonCerrarModal.addEventListener("click", function () {
-        modal.style.display = "none"; // Cierra el modal
-
-        // Intenta reproducir la música
-        if (audio) {
-            audio.play().catch(error => {
-                console.error("No se pudo reproducir el audio:", error);
-            });
-        }
+cerrarModal.addEventListener('click', () => {
+  modal.style.display = "none";
+  
+  // Obtener el audio
+  const audio = document.getElementById("musica");
+  
+  // Reproducir música si está pausada
+  if (audio.paused) {
+    audio.play().catch(e => {
+      console.log("Error al intentar reproducir la música:", e);
     });
+  }
 });
+
 
 // Modales de asistencia
 document.querySelectorAll('.modal-btn').forEach(btn => {
