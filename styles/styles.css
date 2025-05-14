@@ -20,11 +20,23 @@ body {
   }
   
   section {
-    padding: 2rem;
+    padding-bottom: 3rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: -10px;
+  }
+
+
   }
   
   h2 {
@@ -85,17 +97,28 @@ body {
     from { opacity: 0; }
     to { opacity: 1; }
   }
+
+  #info {
+    margin-bottom: -5rem;
+  }
   
   #toggleMusica {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: transparent;
+    display: block;
+    margin: 20px auto;  /* Centra el botón y le da un margen */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 1.5rem;  /* Tamaño de fuente para el botón */
+    background-color: #f6f2e3; /* Color de fondo similar al azul intenso */
+    color: #916f3d; /* Color del texto */
     border: none;
-    font-size: 24px;
-    color: white;
+    border-radius: 5px;
     cursor: pointer;
   }
+
+  #toggleMusica:hover {
+    background-color: #00151e ; /* Color dorado al pasar el ratón */
+    color: #f6f2e3;
+  }
+
   
   /* Parallax */
   #frase .fondo-parallax {
@@ -147,10 +170,6 @@ body {
   
     #portada p {
       font-size: 1.5rem;
-    }
-  
-    section {
-      padding: 3rem;
     }
   
     .linea-tiempo {
@@ -288,6 +307,7 @@ footer {
 
 .open-modal-btn {
     background-color: #ac8a51; /* Color de fondo de los botones */
+    max-height: 100px;
     border: none;
     padding: 15px 30px;
     color: white;
@@ -385,28 +405,11 @@ button.close-modal-btn:hover {
   letter-spacing: 1px;
 }
 
-/* Móvil */
-@media (max-width: 768px) {
-  #cuenta-regresiva {
-    padding: 3rem 1rem;
-  }
-
-  .reloj {
-    gap: 1rem;
-    font-size: 1.2rem;
-  }
-
-  .reloj span {
-    font-size: 1.5rem;
-  }
-
-  .reloj small {
-    font-size: 0.7rem;
-  }
-}#cuenta-regresiva .contenedor-imagen {
+#cuenta-regresiva .contenedor-imagen {
   position: relative;
   max-width: 600px;
-  margin: 0 auto;
+  padding-top: 100px;
+  margin: 0px auto 20px; /* arriba 40px, abajo 20px */
 }
 
 #cuenta-regresiva img {
@@ -424,10 +427,9 @@ button.close-modal-btn:hover {
   justify-content: center;
   align-items: center;
   color: #333;
-  padding: 2rem;
   border-radius: 1rem;
   text-align: center;
-  transform: translate(-5%, -10%);
+  transform: translate(0, 3%);
 }
 
 #cuenta-regresiva h2 {
@@ -461,10 +463,11 @@ button.close-modal-btn:hover {
   letter-spacing: 1px;
 }
 
-/* Responsivo */
+/* Cuenta Regresiva Movil */
 @media (max-width: 768px) {
   #cuenta-regresiva .overlay {
     padding: 1rem;
+    transform: translate(-4%, 1.5%);
   }
 
   #cuenta-regresiva h2 {
@@ -474,6 +477,12 @@ button.close-modal-btn:hover {
     letter-spacing: 2px;
   }
 
+  #cuenta-regresiva .contenedor-imagen {
+  position: relative;
+  max-width: 600px;
+  padding-top: 100px;
+  margin: 0px auto 20px; /* arriba 40px, abajo 20px */
+}
   .reloj {
     gap: 1rem;
     font-size: 1.2rem;
@@ -487,4 +496,3 @@ button.close-modal-btn:hover {
     font-size: 0.7rem;
   }
 }
-
