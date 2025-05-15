@@ -67,7 +67,7 @@ body {
     display: flex;
     justify-content: center;  /* Centra horizontalmente */
     align-items: flex-start;  /* Alinea arriba */
-    color: white;
+    color: #916f3d;
     text-align: center;
     padding: 40px 20px 0; /* Agrega espacio arriba sin tocar el borde */
     position: relative;
@@ -76,17 +76,17 @@ body {
     margin: auto;
     width: 50%;
     padding: 10px;
-    transform: translate(0, -35%);
-    text-shadow: 1px 1px #000000;
+    transform: translate(50%, 30%);
+    /*text-shadow: 1px 1px #000000;*/
   }
   
   #portada h1 {
     font-size: 65px;
     font-family: 'Parisienne', cursive;
     font-weight: bolder;
-    color: white;
+    color: #916f3d;
     margin-bottom: 20px;
-    text-shadow: 2px 2px #000000;
+    /*text-shadow: 2px 2px #000000;*/
     margin-bottom: -2rem;
   }
   
@@ -162,7 +162,7 @@ body {
     .portada-texto {
       width: 100%;
       padding: 10px;
-      transform: translate(0, -65%);
+      transform: translate(0, 95%);
     }
   
     #portada h1 {
@@ -202,14 +202,16 @@ body {
 #galeria {
   background-color: #fff;
   padding: 2rem;
+  text-align: center;
 }
 
 .carrusel {
+  position: relative;
   display: flex;
-  align-items: center;
   justify-content: center;
-  gap: 1rem;
-  flex-wrap: nowrap;
+  align-items: center;
+  max-width: 90%;
+  margin: 0 auto;
   overflow: hidden;
 }
 
@@ -222,23 +224,51 @@ body {
 }
 
 .carrusel button {
-  background: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.8);
   border: none;
   font-size: 2rem;
+  padding: 0.5rem;
   cursor: pointer;
   color: #00151e;
-  transition: color 0.3s;
+  z-index: 10;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s;
 }
 
 .carrusel button:hover {
-  color: #ac8a51;
+  background: rgba(172, 138, 81, 0.8);
+  color: white;
 }
 
+#prev {
+  left: 10px;
+}
+
+#next {
+  right: 10px;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   .carrusel img {
     max-height: 250px;
   }
+
+  .carrusel button {
+    width: 36px;
+    height: 36px;
+    font-size: 1.5rem;
+  }
 }
+
 
 /* Modal de bienvenida */
 .modal {

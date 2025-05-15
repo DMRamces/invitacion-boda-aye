@@ -13,28 +13,28 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
   
-  // Carrusel de imágenes
-const imagenes = [
-  "imagenes/galeria/1.jpg",
-  "imagenes/galeria/2.jpg",
-  "imagenes/galeria/3.jpg",
-  "imagenes/galeria/4.jpg"
-];
+    // Carrusel de imágenes
+  const imagenes = [
+    "imagenes/galeria/1.jpg",
+    "imagenes/galeria/2.jpg",
+    "imagenes/galeria/3.jpg",
+    "imagenes/galeria/4.jpg"
+  ];
 
-let indice = 0;
-const imagen = document.getElementById("imagenCarrusel");
-const btnPrev = document.getElementById("prev");
-const btnNext = document.getElementById("next");
+  let indice = 0;
+  const imagen = document.getElementById("imagenCarrusel");
+  const btnPrev = document.getElementById("prev");
+  const btnNext = document.getElementById("next");
 
-btnPrev.addEventListener("click", () => {
-  indice = (indice - 1 + imagenes.length) % imagenes.length;
-  imagen.src = imagenes[indice];
-});
+  btnPrev.addEventListener("click", () => {
+    indice = (indice - 1 + imagenes.length) % imagenes.length;
+    imagen.src = imagenes[indice];
+  });
 
-btnNext.addEventListener("click", () => {
-  indice = (indice + 1) % imagenes.length;
-  imagen.src = imagenes[indice];
-});
+  btnNext.addEventListener("click", () => {
+    indice = (indice + 1) % imagenes.length;
+    imagen.src = imagenes[indice];
+  });
 
 // Modal de bienvenida
 const modal = document.getElementById("modalBienvenida");
