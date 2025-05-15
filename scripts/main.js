@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     btn.addEventListener("click", () => {
       if (audio.paused) {
         audio.play();
-        btn.textContent = String.fromCodePoint(0x23F8); // Pausa
+        btn.textContent = String.fromCodePoint(0x1D194); // Pausa
       } else {
         audio.pause();
         btn.textContent = String.fromCodePoint(0x1D160); // Play

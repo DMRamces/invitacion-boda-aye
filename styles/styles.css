@@ -147,8 +147,8 @@ body {
   }
   
   .evento img {
-    width: 64px;
-    height: 64px;
+    width: 80px;
+    height: 80px;
     margin-bottom: 0.5rem;
   }
   
@@ -355,8 +355,8 @@ footer {
 }
 
   .modal-content img{
-    width: 64px;
-    height: 64px;
+    width: 80px;
+    height: 80px;
 }
 
 .custom-modal .close-btn {
