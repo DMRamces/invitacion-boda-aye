@@ -162,7 +162,7 @@ body {
     .portada-texto {
       width: 100%;
       padding: 10px;
-      transform: translate(0, 95%);
+      transform: translate(0, 100%);
     }
   
     #portada h1 {
