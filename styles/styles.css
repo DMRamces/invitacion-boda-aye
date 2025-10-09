@@ -2,8 +2,8 @@ body {
     font-family: 'Raleway', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f6f2e3;
-    color: #333;
+    background-color: #17181a;
+    color: #fff;
   }
 
   html {
@@ -55,12 +55,14 @@ small {
   }
   
   h2 {
-    color: #ac8a51;
+    color: #a56d29;
+    font-size: 65px;
+    font-family: 'Lavishly Yours', cursive;
   }
   
   a.boton {
     text-decoration: none;
-    background-color: #ac8a51;
+    background-color: #4a111c;
     color: white;
     padding: 0.7rem 1.5rem;
     margin: 0.5rem;
@@ -76,7 +78,7 @@ small {
     display: flex;
     justify-content: center;  /* Centra horizontalmente */
     align-items: flex-start;  /* Alinea arriba */
-    color: #916f3d;
+    color: #a56d29;
     text-align: center;
     padding: 40px 20px 0; /* Agrega espacio arriba sin tocar el borde */
     position: relative;
@@ -90,10 +92,9 @@ small {
   }
   
   #portada h1 {
-    font-size: 65px;
-    font-family: 'Parisienne', cursive;
-    font-weight: bolder;
-    color: #916f3d;
+    font-size: 80px;
+    font-family: 'Lavishly Yours', cursive;
+    color: #a56d29;
     margin-bottom: 20px;
     /*text-shadow: 2px 2px #000000;*/
     margin-bottom: -2rem;
@@ -118,16 +119,16 @@ small {
     margin: 20px auto;  /* Centra el botón y le da un margen */
     padding: 10px 20px; /* Espaciado interno */
     font-size: 1.5rem;  /* Tamaño de fuente para el botón */
-    background-color: #f6f2e3; /* Color de fondo similar al azul intenso */
-    color: #916f3d; /* Color del texto */
+    background-color: #4a111c; /* Color de fondo similar al azul intenso */
+    color: #f6f2e3; /* Color del texto */
     border: none;
     border-radius: 5px;
     cursor: pointer;
   }
 
   #toggleMusica:hover {
-    background-color: #00151e ; /* Color dorado al pasar el ratón */
-    color: #f6f2e3;
+    background-color: #f6f2e3 ; /* Color dorado al pasar el ratón */
+    color: #b82025;
   }
 
   
@@ -209,7 +210,7 @@ small {
   
   /* Carrusel */
 #galeria {
-  background-color: #fff;
+  background-color: #a56d29;
   padding: 2rem;
   text-align: center;
 }
@@ -474,7 +475,7 @@ button.close-modal-btn:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #333;
+  color: #a56d29;
   border-radius: 1rem;
   text-align: center;
   transform: translate(0, 3%);
@@ -483,7 +484,7 @@ button.close-modal-btn:hover {
 #cuenta-regresiva h2 {
   font-size: 3rem;
   margin-bottom: -1rem;
-  font-family: 'Parisienne', cursive;
+  font-family: 'Lavishly Yours', cursive;
   letter-spacing: 2px;
 }
 
@@ -521,7 +522,7 @@ button.close-modal-btn:hover {
   #cuenta-regresiva h2 {
     font-size: 2.5rem;
     margin-bottom: -0.5rem;
-    font-family: 'Parisienne', cursive;
+    font-family: 'Lavishly Yours', cursive;
     letter-spacing: 2px;
   }
 

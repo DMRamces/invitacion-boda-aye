@@ -18,7 +18,13 @@ document.addEventListener("DOMContentLoaded", function () {
     "imagenes/galeria/1.jpg",
     "imagenes/galeria/2.jpg",
     "imagenes/galeria/3.jpg",
-    "imagenes/galeria/4.jpg"
+    "imagenes/galeria/4.jpg",
+    "imagenes/galeria/5.jpg",
+    "imagenes/galeria/6.jpg",
+    "imagenes/galeria/7.jpg",
+    "imagenes/galeria/8.jpg",
+    "imagenes/galeria/9.jpg",
+    "imagenes/galeria/10.jpg"
   ];
 
   let indice = 0;
