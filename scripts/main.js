@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
   btnMusica.addEventListener("click", () => {
     if (audio.paused) {
       audio.play();
-      btnMusica.innerHTML = String.fromCodePoint(0x23F8) + "<br><small>Apaga música</small>"; // símbolo pausa
+      btnMusica.innerHTML = String.fromCodePoint(0x1D194) + "<br><small>Apaga música</small>"; // símbolo pausa
     } else {
       audio.pause();
       btnMusica.innerHTML = String.fromCodePoint(0x1D160) + "<br><small>Enciende música</small>"; // símbolo play
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Estado inicial del botón de música
-  btnMusica.innerHTML = String.fromCodePoint(0x1D160) + "<br><small>Apaga música</small>";
+  btnMusica.innerHTML = String.fromCodePoint(0x1D194) + "<br><small>Apaga música</small>";
 
   // 🎞️ --- CARRUSEL ---
   const imagenes = [
@@ -44,12 +44,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const btnPrev = document.getElementById("prev");
   const btnNext = document.getElementById("next");
 
-  // Función para mostrar la imagen actual
   function mostrarImagen() {
     imagen.src = imagenes[indice];
   }
 
-  // Eventos de los botones del carrusel
   btnPrev.addEventListener("click", () => {
     indice = (indice - 1 + imagenes.length) % imagenes.length;
     mostrarImagen();
@@ -60,7 +58,6 @@ document.addEventListener("DOMContentLoaded", function () {
     mostrarImagen();
   });
 
-  // Soporte para touch en móvil (deslizar)
   let startX = 0;
   imagen.addEventListener("touchstart", (e) => {
     startX = e.touches[0].clientX;
@@ -69,29 +66,30 @@ document.addEventListener("DOMContentLoaded", function () {
   imagen.addEventListener("touchend", (e) => {
     const endX = e.changedTouches[0].clientX;
     if (startX - endX > 50) {
-      // deslizó hacia la izquierda
       indice = (indice + 1) % imagenes.length;
       mostrarImagen();
     } else if (endX - startX > 50) {
-      // deslizó hacia la derecha
       indice = (indice - 1 + imagenes.length) % imagenes.length;
       mostrarImagen();
     }
   });
 
-  // Mostrar la primera imagen al cargar
   mostrarImagen();
 });
 
-// Fecha de la boda (AAAA, MM-1, DD, HH, MM, SS)
-const fechaBoda = new Date(2026, 05, 29, 15, 0, 0); // 25 de Noviembre 2025, 15:00
+// 🎯 --- CUENTA REGRESIVA ---
+const fechaBoda = new Date(2026, 5, 29, 15, 0, 0); // AAAA, MM-1, DD, HH, MM, SS
 
 function actualizarCuentaRegresiva() {
   const ahora = new Date();
   const diferencia = fechaBoda - ahora;
 
   if (diferencia <= 0) {
-    document.getElementById('timer').innerHTML = "<h3>¡Nos casamos hoy!</h3>";
+    // Actualizamos todos los spans a 0 y mostramos mensaje
+    document.getElementById('dias').textContent = 0;
+    document.getElementById('horas').textContent = 0;
+    document.getElementById('minutos').textContent = 0;
+    document.getElementById('segundos').textContent = 0;
     clearInterval(intervalo);
     return;
   }
@@ -107,7 +105,5 @@ function actualizarCuentaRegresiva() {
   document.getElementById('segundos').textContent = segundos;
 }
 
-// Actualiza cada segundo
 const intervalo = setInterval(actualizarCuentaRegresiva, 1000);
-actualizarCuentaRegresiva(); // Llamada inicial
-
+actualizarCuentaRegresiva();

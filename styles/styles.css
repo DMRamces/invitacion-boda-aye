@@ -15,9 +15,6 @@ body {
     font-size: 20px;
   }
 
-  h2 {
-    
-  }
 
   li.no-bullets {
   list-style-type: none; /* Remove bullets */
@@ -126,7 +123,7 @@ small {
   
   #toggleMusica {
     display: block;
-    margin: 20px auto;  /* Centra el botón y le da un margen */
+    margin: 10px auto;  /* Centra el botón y le da un margen */
     padding: 10px 20px; /* Espaciado interno */
     font-size: 1.5rem;  /* Tamaño de fuente para el botón */
     background-color: #4a111c; /* Color de fondo similar al azul intenso */
@@ -219,7 +216,11 @@ small {
   
     h2 {
       font-weight: 500;
-      font-size: 50px;
+      font-size: 65px;
+    }
+    /* Ajuste para "¡Estás invitado a nuestra boda!" */
+    #info h2 {
+        line-height: 3rem; /* reduce espacio entre líneas en móviles */
     }
 
       /* Parallax */
