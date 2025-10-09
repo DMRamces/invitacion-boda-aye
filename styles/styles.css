@@ -11,15 +11,12 @@ body {
 }
   
   h3, p {
-    font-weight: 300;
+    font-weight: 300px;
+    font-size: 20px;
   }
 
   h2 {
     
-  }
-  
-  h1 {
-    font-weight: 550;
   }
 
   li.no-bullets {
@@ -104,12 +101,13 @@ small {
   }
   
   #portada h1 {
-    font-size: 80px;
+    font-size: 100px;
     font-family: 'Lavishly Yours', cursive;
     color: #a56d29;
     margin-bottom: 20px;
     /*text-shadow: 2px 2px #000000;*/
-    margin-bottom: -2rem;
+    margin-bottom: -3rem;
+    font-weight: 1;
   }
   
   #portada p {
