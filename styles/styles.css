@@ -54,6 +54,13 @@ small {
     font-weight: 500;
   }
 
+  h4 {
+      font-weight: 1;
+      font-size: 40px;
+      font-family: 'Parisienne', cursive;
+      line-height: 3rem; /* reduce espacio entre líneas en móviles */
+    }
+
   
   a.boton {
     text-decoration: none;
@@ -217,11 +224,16 @@ small {
     h2 {
       font-weight: 500;
       font-size: 65px;
+      line-height: 3rem; /* reduce espacio entre líneas en móviles */
     }
-    /* Ajuste para "¡Estás invitado a nuestra boda!" */
-    #info h2 {
-        line-height: 3rem; /* reduce espacio entre líneas en móviles */
+    h4 {
+      font-weight: 100px;
+      font-family:'Parisienne';
+      font-size: 40px;
+      line-height: 3rem; /* reduce espacio entre líneas en móviles */
     }
+
+    
 
       /* Parallax */
   #frase .fondo-parallax {
