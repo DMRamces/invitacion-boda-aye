@@ -15,8 +15,7 @@ body {
   }
 
   h2 {
-    font-weight: 500;
-    font-size: 30px;
+    
   }
   
   h1 {
@@ -58,12 +57,25 @@ small {
     color: #a56d29;
     font-size: 65px;
     font-family: 'Lavishly Yours', cursive;
+    font-weight: 500;
   }
+
   
   a.boton {
     text-decoration: none;
     background-color: #4a111c;
     color: white;
+    padding: 0.7rem 1.5rem;
+    margin: 0.5rem;
+    border-radius: 8px;
+    display: inline-block;
+    font-weight: bold;
+  }
+
+    a.boton2 {
+    text-decoration: none;
+    background-color: #fff;
+    color: #4a111c;
     padding: 0.7rem 1.5rem;
     margin: 0.5rem;
     border-radius: 8px;
@@ -131,6 +143,20 @@ small {
     color: #b82025;
   }
 
+  @media (max-width: 768px) {
+  /* Mueve el botón de música más abajo para que no se superponga */
+  #toggleMusica {
+    margin-top: 40px; /* puedes ajustar a 60px si aún queda cerca */
+    position: relative;
+    z-index: 2; /* asegura que quede por encima de otros elementos */
+  }
+
+  /* Si la flecha sigue tapando el botón, puedes darle más espacio a la portada */
+  #portada {
+    padding-bottom: 60px; /* da más espacio debajo del texto */
+  }
+}
+
   
   /* Parallax */
   #frase .fondo-parallax {
@@ -195,7 +221,7 @@ small {
   
     h2 {
       font-weight: 500;
-      font-size: 40px;
+      font-size: 50px;
     }
 
       /* Parallax */
@@ -207,7 +233,34 @@ small {
     color: white;
   }
   }
-  
+
+/* Sección fecha de la boda */
+#fecha-boda {
+  background-color: #a56d29; /* Amarillo pastel, igual al de galería */
+  width: 100%;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#fecha-boda img {
+  max-width: 80%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Ajuste responsivo */
+@media (max-width: 768px) {
+  #fecha-boda {
+    padding: 1.5rem 0;
+  }
+
+  #fecha-boda img {
+    max-width: 90%;
+  }
+}
+
   /* Carrusel */
 #galeria {
   background-color: #a56d29;

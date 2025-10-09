@@ -1,19 +1,31 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const audio = document.getElementById("musica");
-    const btn = document.getElementById("toggleMusica");
-  
-    btn.addEventListener("click", () => {
-      if (audio.paused) {
-        audio.play();
-        btn.innerHTML = String.fromCodePoint(0x1D194) + "<br><small>Apaga música</small>"; // Pausa
-      } else {
-        audio.pause();
-        btn.innerHTML = String.fromCodePoint(0x1D160) + "<br><small>Enciende música</small>"; // Play
-      }
-    });
+  // 🎵 --- MÚSICA Y MODAL ---
+  const audio = document.getElementById("musica");
+  const modal = document.getElementById("modalBienvenida");
+  const btnCerrarModal = document.getElementById("cerrarModal");
+  const btnMusica = document.getElementById("toggleMusica");
+
+  // Cerrar el modal y activar música
+  btnCerrarModal.addEventListener("click", () => {
+    modal.style.display = "none";
+    audio.play();
   });
-  
-    // Carrusel de imágenes
+
+  // Botón de encender/apagar música
+  btnMusica.addEventListener("click", () => {
+    if (audio.paused) {
+      audio.play();
+      btnMusica.innerHTML = String.fromCodePoint(0x23F8) + "<br><small>Apaga música</small>"; // símbolo pausa
+    } else {
+      audio.pause();
+      btnMusica.innerHTML = String.fromCodePoint(0x1D160) + "<br><small>Enciende música</small>"; // símbolo play
+    }
+  });
+
+  // Estado inicial del botón de música
+  btnMusica.innerHTML = String.fromCodePoint(0x1D160) + "<br><small>Apaga música</small>";
+
+  // 🎞️ --- CARRUSEL ---
   const imagenes = [
     "imagenes/galeria/1.jpg",
     "imagenes/galeria/2.jpg",
@@ -32,116 +44,70 @@ document.addEventListener("DOMContentLoaded", function () {
   const btnPrev = document.getElementById("prev");
   const btnNext = document.getElementById("next");
 
+  // Función para mostrar la imagen actual
+  function mostrarImagen() {
+    imagen.src = imagenes[indice];
+  }
+
+  // Eventos de los botones del carrusel
   btnPrev.addEventListener("click", () => {
     indice = (indice - 1 + imagenes.length) % imagenes.length;
-    imagen.src = imagenes[indice];
+    mostrarImagen();
   });
 
   btnNext.addEventListener("click", () => {
     indice = (indice + 1) % imagenes.length;
-    imagen.src = imagenes[indice];
+    mostrarImagen();
   });
 
-// Modal de bienvenida
-const modal = document.getElementById("modalBienvenida");
-const cerrarModal = document.getElementById("cerrarModal");
+  // Soporte para touch en móvil (deslizar)
+  let startX = 0;
+  imagen.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
+  });
 
-if (!sessionStorage.getItem("modalMostrado")) {
-  modal.style.display = "flex";
-  sessionStorage.setItem("modalMostrado", "true");
+  imagen.addEventListener("touchend", (e) => {
+    const endX = e.changedTouches[0].clientX;
+    if (startX - endX > 50) {
+      // deslizó hacia la izquierda
+      indice = (indice + 1) % imagenes.length;
+      mostrarImagen();
+    } else if (endX - startX > 50) {
+      // deslizó hacia la derecha
+      indice = (indice - 1 + imagenes.length) % imagenes.length;
+      mostrarImagen();
+    }
+  });
+
+  // Mostrar la primera imagen al cargar
+  mostrarImagen();
+});
+
+// Fecha de la boda (AAAA, MM-1, DD, HH, MM, SS)
+const fechaBoda = new Date(2026, 05, 29, 15, 0, 0); // 25 de Noviembre 2025, 15:00
+
+function actualizarCuentaRegresiva() {
+  const ahora = new Date();
+  const diferencia = fechaBoda - ahora;
+
+  if (diferencia <= 0) {
+    document.getElementById('timer').innerHTML = "<h3>¡Nos casamos hoy!</h3>";
+    clearInterval(intervalo);
+    return;
+  }
+
+  const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+  const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+  const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+  document.getElementById('dias').textContent = dias;
+  document.getElementById('horas').textContent = horas;
+  document.getElementById('minutos').textContent = minutos;
+  document.getElementById('segundos').textContent = segundos;
 }
 
-cerrarModal.addEventListener('click', () => {
-  modal.style.display = "none";
-  
-  // Obtener el audio
-  const audio = document.getElementById("musica");
-  
-  // Reproducir música si está pausada
-  if (audio.paused) {
-    audio.play().catch(e => {
-      console.log("Error al intentar reproducir la música:", e);
-    });
-  }
-});
+// Actualiza cada segundo
+const intervalo = setInterval(actualizarCuentaRegresiva, 1000);
+actualizarCuentaRegresiva(); // Llamada inicial
 
-
-// Modales de asistencia
-document.querySelectorAll('.modal-btn').forEach(btn => {
-  btn.addEventListener('click', function () {
-    const modalId = this.getAttribute('data-modal');
-    const modal = document.getElementById(modalId);
-    if (modal) modal.style.display = 'block';
-  });
-});
-
-document.querySelectorAll('.modal-info .cerrar').forEach(btn => {
-  btn.addEventListener('click', function () {
-    this.closest('.modal-info').style.display = 'none';
-  });
-});
-
-window.addEventListener('click', function (e) {
-  if (e.target.classList.contains('modal-info')) {
-    e.target.style.display = 'none';
-  }
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-  // Abre el modal correspondiente cuando se hace clic en un botón
-  const openModalButtons = document.querySelectorAll('.open-modal-btn');
-  const modals = document.querySelectorAll('.custom-modal');
-  const closeButtons = document.querySelectorAll('.close-btn');
-  const closeModalButtons = document.querySelectorAll('.close-modal-btn');
-
-  openModalButtons.forEach(button => {
-      button.addEventListener('click', () => {
-          const modalId = button.getAttribute('data-modal');
-          const modal = document.getElementById(modalId);
-          modal.style.display = 'flex'; // Abre el modal
-      });
-  });
-
-  // Cerrar los modales cuando se hace clic en la X
-  closeButtons.forEach(button => {
-      button.addEventListener('click', () => {
-          const modal = button.closest('.custom-modal');
-          modal.style.display = 'none';
-      });
-  });
-
-  // Cerrar los modales cuando se hace clic en el botón de "Cerrar"
-  closeModalButtons.forEach(button => {
-      button.addEventListener('click', () => {
-          const modal = button.closest('.custom-modal');
-          modal.style.display = 'none';
-      });
-  });
-
-  // Cerrar el modal si se hace clic fuera del contenido del modal
-  modals.forEach(modal => {
-      modal.addEventListener('click', (event) => {
-          if (event.target === modal) {
-              modal.style.display = 'none';
-          }
-      });
-  });
-});
-
-// Cuenta regresiva
-const fechaObjetivo = new Date("2026-05-29T15:00:00").getTime(); // ejemplo
-
-setInterval(() => {
-  const ahora = new Date().getTime();
-  const distancia = fechaObjetivo - ahora;
-
-  const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
-  const horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
-  const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
-
-  document.getElementById("dias").textContent = dias.toString().padStart(2, "0");
-  document.getElementById("horas").textContent = horas.toString().padStart(2, "0");
-  document.getElementById("minutos").textContent = minutos.toString().padStart(2, "0");
-  document.getElementById("segundos").textContent = segundos.toString().padStart(2, "0");
-}, 1000);
