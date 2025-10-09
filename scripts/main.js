@@ -5,10 +5,10 @@ document.addEventListener("DOMContentLoaded", function () {
     btn.addEventListener("click", () => {
       if (audio.paused) {
         audio.play();
-        btn.textContent = String.fromCodePoint(0x1D194); // Pausa
+        btn.innerHTML = String.fromCodePoint(0x1D194) + "<br><small>Apaga música</small>"; // Pausa
       } else {
         audio.pause();
-        btn.textContent = String.fromCodePoint(0x1D160); // Play
+        btn.innerHTML = String.fromCodePoint(0x1D160) + "<br><small>Enciende música</small>"; // Play
       }
     });
   });
