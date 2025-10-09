@@ -6,6 +6,13 @@ body {
     color: #fff;
   }
 
+  @media (max-width: 768px) {
+    body {
+        margin: 10px;
+    }
+}
+
+
   html {
   scroll-behavior: smooth;
 }
