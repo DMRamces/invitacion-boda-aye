@@ -23,6 +23,12 @@ body {
     font-size: 20px;
   }
 
+  #controls {
+    display: flex;
+    flex-direction: column; /* Para que se apilen verticalmente */
+    align-items: flex-start; /* Alinea a la izquierda, cambia a center si quieres centrado */
+    gap: 10px; /* Espacio entre selector y botón */
+}
 
   li.no-bullets {
   list-style-type: none; /* Remove bullets */
@@ -364,7 +370,7 @@ small {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999;
+  z-index: 1000;
 }
 
 .modal-contenido {
@@ -619,3 +625,23 @@ button.close-modal-btn:hover {
   }
 }
 
+#cambiarIdioma {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: rgba(255,255,255,0.8);
+  border: 1px solid #ac8a51;
+  border-radius: 8px;
+  padding: 5px 10px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+#btn-lang-toggle {
+    position: fixed; /* o absolute dependiendo del layout */
+    top: 10px;
+    right: 10px;
+    z-index: 9999; /* superior al modal */
+}

@@ -10,18 +10,28 @@
 <link href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&family=Mea+Culpa&family=Parisienne&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div id="controles">
+  <select id="cambiarIdioma" aria-label="Seleccionar idioma">
+  <option value="es" selected>Español</option>
+  <option value="en">English</option>
+  </select>
+
+  </div>
+
+ <!-- data-es="" data-en="" -->
+
   <!-- Modal de bienvenida -->
   <div id="modalBienvenida" class="modal">
     <div class="modal-contenido">
       <img src="../imagenes/bienvenida.jpg" alt="Bienvenida a nuestra boda" />
-      <button id="cerrarModal">¡Dinos Tammy!</button>
+      <button id="cerrarModal" data-es="¡Dinos Tammy!" data-en="Tell us Tammy!">¡Dinos Tammy!</button>
     </div>
   </div>
 
   <!-- Portada con animación y música -->
   <section id="portada" class="fade-in">
     <div class="portada-texto">
-      <h1>¡Nos casamos!</h1>
+      <h1 data-es="¡Nos casamos!" data-en="We're getting married!">¡Nos casamos!</h1>
       <p>Angie & Errol</p>
       <a href="#info">
         <img src="../iconos/flechaAbajo.png" alt="flecha hacia abajo" />
@@ -33,20 +43,26 @@
     </audio>
   </section>
 
-  <!-- Botón de activar/desactivar la música -->
+    <!-- Botón de activar/desactivar la música -->
   <button id="toggleMusica" aria-label="Control de música">&#x1D194;<br><small>Apaga música</small></button>
   
   <!-- Sección de información básica -->
   <section id="info">
-    <h2>¡Estás invitado a nuestra boda!</h2>
+    <h2 data-es="¡Estás invitado a nuestra boda!" data-en="You've been invited to our wedding!">¡Estás invitado a nuestra boda!</h2>
       <section id="fecha-boda">
         <img src="imagenes/fecha.png" alt="Fecha de la boda" />
-        <a href="https://calendar.app.google/ZfimdRoRRWy6b5Sy7" target="_blank" class="boton2">Agregar a Calendario</a> <!-- Placeholder: https://calendar.app.google/ZUJ5VSFAJPM9KYP19 -->
+        <a href="https://calendar.app.google/ZfimdRoRRWy6b5Sy7" target="_blank" class="boton2" data-es="Agregar a Calendario" data-en="Add to calendar">Agregar a Calendario</a> <!-- Placeholder: https://calendar.app.google/ZUJ5VSFAJPM9KYP19 -->
       </section>
-    <p>&#9906;<br><strong>Ceremonia:</strong><br>Iglesia de Santa Bárbara, Heredia<br>3:00 p.m.</p>
-    <a href="https://maps.app.goo.gl/WcdVcw3snoJ4cNqB9" target="_blank" class="boton">¿Cómo llegar?</a>
-    <p>&#9906;<br><strong>Lugar:</strong><br>Villa Catalina, Alajuela<br>5:00 p.m.</p>
-    <a href="https://maps.app.goo.gl/vpX5Sw7QoikmeyKw6" target="_blank" class="boton">¿Cómo llegar?</a>
+    <p data-es="&#9906;<br><strong>Ceremonia:</strong><br>Iglesia de Santa Bárbara, Heredia<br>2:30 p.m." 
+    data-en="&#9906;<br><strong>Ceremony:</strong><br>Church of Santa Bárbara, Heredia<br>2:30 p.m.">
+    &#9906;<br><strong>Ceremonia:</strong><br>Iglesia de Santa Bárbara, Heredia<br>2:30 p.m.
+    </p>
+    <a href="https://maps.app.goo.gl/WcdVcw3snoJ4cNqB9" target="_blank" class="boton" data-es="¿Cómo llegar?" data-en="Address">¿Cómo llegar?</a>
+    <p data-es="&#9906;<br><strong>Recepción:</strong><br>Villa Catalina, Alajuela<br>5:00 p.m." 
+    data-en="&#9906;<br><strong>Reception:</strong><br>Villa Catalina, Alajuela<br>5:00 p.m.">
+    &#9906;<br><strong>Recepción:</strong><br>Villa Catalina, Alajuela<br>5:00 p.m.
+    </p>
+    <a href="https://maps.app.goo.gl/vpX5Sw7QoikmeyKw6" target="_blank" class="boton" data-es="¿Cómo llegar?" data-en="Address">¿Cómo llegar?</a>
   </section>
 <!-- https://maps.app.goo.gl/WQYN23TjSY8uY3o28 -->
   <!-- Sección cuenta regresiva -->
@@ -54,12 +70,12 @@
     <div class="contenedor-imagen">
       <img src="imagenes/fondoCuentaRegresiva.png" alt="Fondo cuenta regresiva">
       <div class="overlay">
-        <h2>Faltan</h2>
+        <h2 data-es="Faltan" data-en="Countdown">Faltan</h2>
         <div class="reloj">
-          <div><span id="dias">00</span><small>DÍAS</small></div>
-          <div><span id="horas">00</span><small>HS</small></div>
-          <div><span id="minutos">00</span><small>MIN</small></div>
-          <div><span id="segundos">00</span><small>SEG</small></div>
+          <div><span id="dias" data-es="DÍAS" data-en="DAYS">00</span><small>DÍAS</small></div>
+          <div><span id="horas" data-es="HS" data-en="HOURS">00</span><small>HS</small></div>
+          <div><span id="minutos" data-es="MIN" data-en="MIN">00</span><small>MIN</small></div>
+          <div><span id="segundos" data-es="SEG" data-en="SEC">00</span><small>SEG</small></div>
         </div>
       </div>
     </div>
@@ -67,7 +83,7 @@
 
   <!-- Línea de tiempo -->
   <section id="timeline">
-    <h2>Itinerario</h2>
+    <h2 data-es="Itinerario" data-en="Itinerary">Itinerario</h2>
     <div class="linea-tiempo">
       <div class="evento">
         <!--<img src="iconos/reloj.svg" alt="Bienvenida" />
@@ -75,15 +91,23 @@
       </div> -->
       <div class="evento">
         <img src="iconos/ceremonia.svg" alt="Ceremonia" />
-        <p>3:00 p.m. – Ceremonia</p>
+        <p data-es="2:30 p.m. – Ceremonia" data-en="2:30 p.m. – Ceremony">2:30 p.m. – Ceremonia</p>
       </div>
       <div class="evento">
         <img src="iconos/brindis.svg" alt="Brindis" />
-        <p>5:00 p.m. – Brindis</p>
+        <p data-es="5:00 p.m. – Brindis" data-en="5:00 p.m. – Toast">5:00 p.m. – Brindis</p>
       </div>
       <div class="evento">
         <img src="iconos/recepcion.svg" alt="Recepción" />
-        <p>5:30 p.m. – Recepción</p>
+        <p data-es="5:30 p.m. – Recepción" data-en="5:30 p.m. – Reception">5:30 p.m. – Recepción</p>
+      </div>
+      <div class="evento">
+        <img src="iconos/recepcion.svg" alt="Cena" />
+        <p data-es="6:30 p.m. – Cena" data-en="6:30 p.m. – Dinner">6:30 p.m. – Cena</p>
+      </div>
+      <div class="evento">
+        <img src="iconos/recepcion.svg" alt="Baile" />
+        <p data-es="7:30 p.m. – Baile" data-en="7:30 p.m. – Dance">7:30 p.m. – Baile</p>
       </div>
     </div>
   </section>
@@ -92,16 +116,16 @@
   <section id="frase">
     <div class="fondo-parallax">
       <img class="icono-intermedio" src="iconos/intermedio.svg" alt="intermedio" />
-      <h4>Un viaje más que queremos hacer juntos</h4>
+      <h4 data-es="Un viaje más que queremos hacer juntos" data-en="Another journey we want to do together">Un viaje más que queremos hacer juntos</h4>
       <img id="icono-intermedio" src="iconos/intermedio.svg" alt="intermedio" />
     </div>
   </section>
 
   <!-- Información importante -->
   <section id="info-extra">
-    <h2>Código de vestimenta</h2>
-    <p><strong style="font-size: larger;">Formal</strong><br><a href="https://mx.pinterest.com/search/pins/?q=vestimenta%20formal%20boda%20pareja&rs=ac&len=22&source_id=ac_SYNB56uy&eq=vestimenta%20formal%20boda&etslf=11383" target="_blank" style="color: #a56d29;">Guía visual</a></p>
-    <p>La combinación de colores vino + negro y el color blanco están reservados para los novios.</p>
+    <h2 data-es="Código de vestimenta" data-en="Dresscode">Código de vestimenta</h2>
+    <p data-es="Formal" data-en="Formal"><strong style="font-size: larger;">Formal</strong><br><a href="https://mx.pinterest.com/search/pins/?q=vestimenta%20formal%20boda%20pareja&rs=ac&len=22&source_id=ac_SYNB56uy&eq=vestimenta%20formal%20boda&etslf=11383" target="_blank" style="color: #a56d29;">Guía visual</a></p>
+    <p data-es="La combinación de colores vino + negro y el color blanco están reservados para los novios." data-en="Dark red + black combination and white colors are reserved for the bride and groom">La combinación de colores vino + negro y el color blanco están reservados para los novios.</p>
     
     <!--<h2>¿Como te gustaría acompañarnos?</h2>
 
@@ -202,21 +226,21 @@
 
   <!-- Sección confirmación -->
   <section id="confirmacion">
-    <h2>Confirma tu asistencia</h2>
-    <p>Puedes hacerlo por medio del siguiente formulario</p>
-    <a href="https://forms.gle/WDCtE8BbE8J5kbXq5" target="_blank" class="boton">Confirmar Asistencia</a>
+    <h2 data-es="Confirma tu asistencia" data-en="RSVP">Confirma tu asistencia</h2>
+    <p data-es="Puedes hacerlo por medio del siguiente formulario" data-en="You can do it in this form">Puedes hacerlo por medio del siguiente formulario</p>
+    <a href="https://forms.gle/WDCtE8BbE8J5kbXq5" target="_blank" class="boton" data-es="Confirmar Asistencia" data-en="RSVP">Confirmar Asistencia</a>
   </section>
 
   <!-- Álbum compartido -->
   <section id="album">
-    <h2>Comparte tus fotos y videos</h2>
-    <p>¡Nos encantaría que nos compartieras tus fotos y videos de este día!</p>
+    <h2 data-es="Comparte tus fotos y videos" data-en="Share your memories">Comparte tus fotos y videos</h2>
+    <p data-es="¡Nos encantaría que nos compartieras tus fotos y videos de este día!" data-en="We would love to see your pics and videos of the day!">¡Nos encantaría que nos compartieras tus fotos y videos de este día!</p>
     <a href="https://web.dotstheapp.com/a?group=1962452&code=Om8jEJCY&dlBy=vampireravnos&utm_source=guest&utm_medium=share&utm_campaign=guest_event_album&force_app=1" target="_blank" class="boton">Subir al álbum</a>
   </section>
 
     <!-- Carrusel de fotos -->
     <section id="galeria">
-      <h2 style="color: #fff;">Un vistazo a nuestros recuerdos</h2>
+      <h2 style="color: #fff;" data-es="Un vistazo a nuestros recuerdos" data-en="A glimpse of our memories">Un vistazo a nuestros recuerdos</h2>
       <div class="carrusel">
         <button id="prev" aria-label="Anterior">&#10094;</button> <!-- « -->
         <img id="imagenCarrusel" src="imagenes/galeria/1.jpg" alt="Foto de la boda" />
@@ -226,13 +250,13 @@
 
   <!-- Regalos -->
   <section id="regalos">
-    <h2>¿Pensabas en un regalo?</h2>
-    <p>Para nosotros lo más importante es tu presencia, pero si deseas darnos un regalo, agradecemos que sea en efectivo. Tendremos un cofre para ello el día de la boda.</p>
+    <h2 data-es="¿Pensabas en un regalo?" data-en="Thinking on a gift?">¿Pensabas en un regalo?</h2>
+    <p data-es="Para nosotros lo más importante es tu presencia, pero si deseas darnos un regalo, agradecemos que sea en efectivo. Tendremos un cofre para ello el día de la boda." data-en="The most important thing for us is your company, but if you are thinking on a gift, we prefer cash. We will have a small chest for it on the wedding day.">Para nosotros lo más importante es tu presencia, pero si deseas darnos un regalo, agradecemos que sea en efectivo. Tendremos un cofre para ello el día de la boda.</p>
   </section>
 
   <!-- Contacto -->
   <footer>
-    <p style="color: #fff;">Contacto: Angie 8870-7579 | Errol 8811-4207</p>
+    <p style="color: #fff;" data-es="Contacto: Angie 8870-7579 | Errol 8811-4207" data-en="Contact: Angie (+506)8870-7579 | Errol (+506)8811-4207">Contacto: Angie 8870-7579 | Errol 8811-4207</p>
   </footer>
 
   <audio id="musicaFondo" src="./assets/audio/musica.mp3" loop></audio>
