@@ -10,13 +10,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&family=Mea+Culpa&family=Parisienne&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div id="controles">
   <select id="cambiarIdioma" aria-label="Seleccionar idioma">
-  <option value="es" selected>Español</option>
-  <option value="en">English</option>
+    <option value="es" selected>Español</option>
+    <option value="en">English</option>
   </select>
 
-  </div>
+  <div id="controles">
+  <!-- Botón de activar/desactivar la música -->
+  <div class="botonToggle"><button id="toggleMusica" aria-label="Control de música">&#x1D194;<br><small>Apaga música</small></button></div>
+</div>
 
  <!-- data-es="" data-en="" -->
 
@@ -43,8 +45,8 @@
     </audio>
   </section>
 
-    <!-- Botón de activar/desactivar la música -->
-  <button id="toggleMusica" aria-label="Control de música">&#x1D194;<br><small>Apaga música</small></button>
+    <!-- Botón de activar/desactivar la música 
+  <button id="toggleMusica" aria-label="Control de música">&#x1D194;<br><small>Apaga música</small></button> -->
   
   <!-- Sección de información básica -->
   <section id="info">
@@ -101,14 +103,14 @@
         <img src="iconos/recepcion.svg" alt="Recepción" />
         <p data-es="5:30 p.m. – Recepción" data-en="5:30 p.m. – Reception">5:30 p.m. – Recepción</p>
       </div>
-      <div class="evento">
+      <!--<div class="evento">
         <img src="iconos/recepcion.svg" alt="Cena" />
         <p data-es="6:30 p.m. – Cena" data-en="6:30 p.m. – Dinner">6:30 p.m. – Cena</p>
       </div>
       <div class="evento">
         <img src="iconos/recepcion.svg" alt="Baile" />
         <p data-es="7:30 p.m. – Baile" data-en="7:30 p.m. – Dance">7:30 p.m. – Baile</p>
-      </div>
+      </div> -->
     </div>
   </section>
 
@@ -228,7 +230,7 @@
   <section id="confirmacion">
     <h2 data-es="Confirma tu asistencia" data-en="RSVP">Confirma tu asistencia</h2>
     <p data-es="Puedes hacerlo por medio del siguiente formulario" data-en="You can do it in this form">Puedes hacerlo por medio del siguiente formulario</p>
-    <a href="https://forms.gle/WDCtE8BbE8J5kbXq5" target="_blank" class="boton" data-es="Confirmar Asistencia" data-en="RSVP">Confirmar Asistencia</a>
+    <a href="https://forms.gle/Jn8iNfKEoxKZTbta6" target="_blank" class="boton" data-es="Confirmar Asistencia" data-en="RSVP">Confirmar Asistencia</a>
   </section>
 
   <!-- Álbum compartido -->

@@ -155,6 +155,14 @@ small {
     cursor: pointer;
   }
 
+  #botonToggle {
+    display: block;
+    margin-left: auto;  /* pushes it to the right */
+    margin-right: 10px; /* optional spacing from edge */
+    cursor: pointer;
+    position: relative;
+}
+
   #toggleMusica:hover {
     background-color: #f6f2e3 ; /* Color dorado al pasar el ratón */
     color: #b82025;
@@ -646,4 +654,47 @@ button.close-modal-btn:hover {
     top: 10px;
     right: 10px;
     z-index: 9999; /* superior al modal */
+}
+
+
+/* Botón de música: asegúrate que se vea encima de la imagen y no quede oculto */
+.botonToggle button#toggleMusica {
+  margin-top: 40px;
+  padding: 8px 12px;
+  background-color: #f6f2e3;
+  color: #4a111c;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  z-index: 10002;          /* aún más alto por si acaso */
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 10001;            /* mayor que 9999 para que quede sobre el modal */
+  display: flex;
+  flex-direction: column;    /* apilar select arriba y botón debajo */
+  align-items: flex-end;     /* alinear a la derecha */
+  gap: 8px;                  /* separación entre select y botón */
+  pointer-events: auto;
+}
+
+/* Hover (mantengo tu estilo) */
+.botonToggle button#toggleMusica:hover {
+  background-color: #b82025;
+  color: #f6f2e3;
+}
+
+/* Ajustes móviles (si es necesario) */
+@media (max-width: 480px) {
+  #controles {
+    top: 8px;
+    right: 8px;
+    gap: 6px;
+  }
+  .botonToggle button#toggleMusica {
+    padding: 6px 10px;
+    font-size: 0.95rem;
+    margin-top: 40px;
+  }
 }
