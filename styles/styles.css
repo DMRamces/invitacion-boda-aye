@@ -227,9 +227,10 @@ small {
     }
   
     #portada h1 {
+      margin-top: 60px;
       font-size: 60px;
-      margin-bottom: 4rem;
-      line-height: 3rem;
+      margin-bottom: 0rem;
+      line-height: 1rem;
     }
     }
   
