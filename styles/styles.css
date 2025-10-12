@@ -281,7 +281,6 @@ small {
     align-items: center;
     min-height: 200px;
     position: relative; /* asegura que z-index funcione si lo necesitas */
-    z-index: 1000;
   }
 
 #fecha-boda img {
