@@ -18,7 +18,8 @@ body {
 }
 
 p {
-  margin: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
   
@@ -72,7 +73,8 @@ small {
     font-size: 65px;
     font-family: 'Lavishly Yours', cursive;
     font-weight: 500;
-    margin: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 
   h4 {
@@ -81,7 +83,6 @@ small {
       font-family: 'Parisienne', cursive;
       line-height: 3rem; /* reduce espacio entre líneas en móviles */
       color: #a56d29;
-      margin: 20px;
     }
 
   
@@ -265,6 +266,8 @@ small {
       font-family:'Parisienne';
       font-size: 40px;
       line-height: 3rem; /* reduce espacio entre líneas en móviles */
+      margin-left: 20px;
+      margin-right: 20px;
     }
 
     
@@ -719,4 +722,40 @@ html, body {
 img, section, div {
   max-width: 100%;
   box-sizing: border-box;
+}
+
+footer#footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background-color: #fff; /* o #e2e2e2 si querés mantener la paleta */
+  color: #00151e; /* Azul intenso */
+  font-size: 10px;
+  border-top: 1px solid #ac8a51; /* Línea dorada */
+}
+
+footer#footer hr {
+  width: 60%;
+  margin: 0 auto 1rem;
+  border: none;
+  border-top: 1px solid #ac8a51; /* Dorado */
+}
+
+footer#footer a {
+  color: #ac8a51; /* Dorado */
+  text-decoration: none;
+}
+
+footer#footer a:hover {
+  text-decoration: underline;
+  color: #00151e; /* Azul intenso */
+}
+
+@media (max-width: 768px) {
+  footer#footer {
+    font-size: 0.8rem;
+    padding: 1rem;
+  }
+  footer#footer hr {
+    width: 80%;
+  }
 }
