@@ -8,7 +8,7 @@ body {
 
   @media (max-width: 768px) {
     body {
-        margin: 10px;
+
     }
 }
 
@@ -16,6 +16,11 @@ body {
   html {
   scroll-behavior: smooth;
 }
+
+p {
+  margin: 20px;
+}
+
   
   h3, p {
     font-weight: 300px;
@@ -67,6 +72,7 @@ small {
     font-size: 65px;
     font-family: 'Lavishly Yours', cursive;
     font-weight: 500;
+    margin: 20px;
   }
 
   h4 {
@@ -75,6 +81,7 @@ small {
       font-family: 'Parisienne', cursive;
       line-height: 3rem; /* reduce espacio entre líneas en móviles */
       color: #a56d29;
+      margin: 20px;
     }
 
   
@@ -550,7 +557,7 @@ button.close-modal-btn:hover {
 #cuenta-regresiva .contenedor-imagen {
   position: relative;
   max-width: 600px;
-  padding-top: 100px;
+  padding-top: 150px;
   margin: 0px auto 20px; /* arriba 40px, abajo 20px */
 }
 
@@ -701,4 +708,15 @@ button.close-modal-btn:hover {
     font-size: 0.95rem;
     margin-top: 40px;
   }
+}
+
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+img, section, div {
+  max-width: 100%;
+  box-sizing: border-box;
 }
