@@ -751,7 +751,6 @@ footer#footer a:hover {
 @media (max-width: 768px) {
   footer#footer {
     font-size: 0.8rem;
-    padding: 1rem;
   }
   footer#footer hr {
     width: 80%;
