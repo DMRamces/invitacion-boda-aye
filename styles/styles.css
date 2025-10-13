@@ -25,11 +25,26 @@ p {
   font-size: 20px;
 }
 
+.nowrap {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: visible;
+  -webkit-text-size-adjust: 100%;
+}
   
   h3 {
     font-weight: 300px;
     font-size: 20px;
     
+  }
+
+  a {
+    color: #a56d29; /* Dorado */
+    text-decoration: underline; /* Quita el subrayado si no lo querés */
+  }
+
+  a:hover {
+    color: #7c633b; /* Un tono más oscuro al pasar el mouse (opcional) */
   }
 
   #controls {
