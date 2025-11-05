@@ -589,7 +589,7 @@ button.close-modal-btn:hover {
   color: #fff;
   border-radius: 1rem;
   text-align: center;
-  transform: translate(0, 3%);
+  transform: translate(0, 7%);
 }
 
 #cuenta-regresiva h2 {
