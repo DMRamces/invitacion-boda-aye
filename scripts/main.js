@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
   mostrarImagen();
 
   // --- CUENTA REGRESIVA ---
-  const fechaBoda = new Date(2026, 5, 29, 15, 0, 0);
+  const fechaBoda = new Date(2026, 4, 29, 15, 0, 0);
 
   function actualizarCuentaRegresiva() {
     const ahora = new Date();
